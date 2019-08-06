@@ -129,3 +129,23 @@ let r2 = &mut s;            // OK!
 
 - At any given time, you can have either one mutable reference or any number of immutable references.
 - References must always be valid.
+
+```rust
+use std::thread;
+
+fn threading() {
+    let x = String::from("hello");
+
+    let handle = thread::spawn(move || {
+        println!("{}", x);
+    });
+
+    handle.join().unwrap();
+}
+```
+
+The keyword `move` let a thread pass owner to another thread. It moves the memory content.
+
+`mutex` (short for `mutual exclusion`), any time something is accessed within this locked mutext, it
+is guaranteed to be single thread.
+
