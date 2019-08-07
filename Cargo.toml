@@ -2,4 +2,5 @@
 
 members = [
 	"hello_rust",
+	"cargo_and_crates",
 ]
