@@ -6,4 +6,5 @@ members = [
 	"storing_efficiently",
 	"macros",
     "iron-gcd",
+	"mandelbrot",
 ]
